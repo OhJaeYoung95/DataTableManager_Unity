@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class DataTable : MonoBehaviour
+public abstract class DataTable
 {
-    // Start is called before the first frame update
-    void Start()
+    [System.Serializable]
+    public enum ID
     {
-        
+        None = -1,
+        PlayerInfo,
+        CubeCount,
+        Score
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public ID id = ID.None;
+
+    public abstract bool LoadFromJson();
+    public abstract bool SaveToJson();
+
 }
