@@ -20,4 +20,6 @@ public abstract class DataTable
     public abstract bool LoadFromJson();
     public abstract bool SaveToJson();
 
+    public abstract string SaveToCSV();
+    public abstract void LoadFromCSV();
 }
