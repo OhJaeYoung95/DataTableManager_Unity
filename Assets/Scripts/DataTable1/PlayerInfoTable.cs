@@ -5,14 +5,15 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-public class PlayerInfo
+[System.Serializable]
+public struct PlayerInfo
 {
     public Vector3 position;
     public Vector3 rotation;
     public Vector3 scale;
 }
 
-public class PlayerInfoTable : DataTable
+public class PlayerInfoTable : DataTable1
 {
     public string infoPath = "PlayerInfo";
 
